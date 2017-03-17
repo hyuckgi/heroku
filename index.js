@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 mongoose.connect(process.env.MONGODB_URI);
 
 // define model
-var Books = require('./model/books');
+var Books = require('./models/books');
 
 app.get('/', function(request, response) {
   response.render('pages/index');
