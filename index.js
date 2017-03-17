@@ -41,10 +41,7 @@ app.get('/cool', function(request, response) {
 });
 
 app.get('/books', function(req, res) {
-    Books.find(function(err, books) {
-        if(err) return res.status(500).send({error: 'database failure'});
-        res.json(books);
-    });
+    res.json({success: true})
 });
 
 app.listen(app.get('port'), function() {
